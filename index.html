@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,41 +15,94 @@
       <h1 class="logo">Patrick Mancuso</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" data-modal="about">About</a></li>
+          <li><a href="#" data-modal="projects">Projects</a></li>
+          <li><a href="#" data-modal="resume">Resume</a></li>
+          <li><a href="#" data-modal="contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero / Dashboard Section -->
+  <section class="hero dashboard">
     <div class="hero-content">
       <h2>Turning Data into Insight</h2>
       <p>Data Analyst & Information Science Student at CU Boulder</p>
-      <a href="projects.html" class="cta-button">View My Work</a>
+      <div class="dashboard-grid">
+        <div class="dashboard-item">
+          <h4>Résumé</h4>
+          <embed src="Mancuso_Patrick_Resume (1).pdf" type="application/pdf" width="100%" height="200px" />
+        </div>
+        <div class="dashboard-item">
+          <h4>Recent Projects</h4>
+          <p>Customer Insights Dashboard<br>Data-Based Website Development</p>
+        </div>
+        <div class="dashboard-item">
+          <h4>Connect</h4>
+          <p><a href="mailto:patrick.mancuso@colorado.edu">patrick.mancuso@colorado.edu</a><br>
+          <a href="https://www.linkedin.com/in/patrickmancuso" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Introduction Section -->
-  <section class="intro">
-    <div class="intro-content">
-      <h3>Welcome</h3>
+  <!-- MODALS -->
+  <div id="about" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>About Me</h2>
       <p>
-        I'm an analytical and detail-oriented student passionate about transforming raw data 
-        into actionable insights. My projects focus on creating accessible dashboards and 
-        interactive web tools that empower users to make informed decisions.
+        I’m a student of Information Science at CU Boulder passionate about data storytelling 
+        and creating meaningful, interactive tools. I enjoy building dashboards, analyzing 
+        behavior data, and making insights accessible.
       </p>
-      <a href="about.html" class="text-link">Learn more about me →</a>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
+  <div id="projects" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Projects</h2>
+      <h3>Customer Insights Dashboard</h3>
+      <p>
+        Built an interactive Python & Tableau dashboard analyzing over 5,000 customer reviews, 
+        enabling stakeholders to pinpoint service pain points through visual analytics.
+      </p>
+      <h3>Data-Based Website Development</h3>
+      <p>
+        Created a platform for cataloging music collections and integrating the Last.FM API for 
+        personalized recommendations and insights.
+      </p>
+    </div>
+  </div>
+
+  <div id="resume" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Résumé</h2>
+      <embed src="Mancuso_Patrick_Resume (1).pdf" type="application/pdf" width="100%" height="500px" />
+      <a href="Mancuso_Patrick_Resume (1).pdf" class="cta-button" download>Download PDF</a>
+    </div>
+  </div>
+
+  <div id="contact" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:patrick.mancuso@colorado.edu">patrick.mancuso@colorado.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/patrickmancuso" target="_blank">patrickmancuso</a></p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+
   <footer>
-    <p>© 2025 Patrick Mancuso | <a href="www.linkedin.com/in/patrickmancuso" target="_blank">LinkedIn</a></p>
+    <p>© 2025 Patrick Mancuso | <a href="https://www.linkedin.com/in/patrickmancuso" target="_blank">LinkedIn</a></p>
   </footer>
 </body>
 </html>
