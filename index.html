@@ -61,22 +61,62 @@
     </div>
   </div>
 
-  <div id="projects" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Projects</h2>
-      <h3>Customer Insights Dashboard</h3>
-      <p>
-        Built an interactive Python & Tableau dashboard analyzing over 5,000 customer reviews, 
-        enabling stakeholders to pinpoint service pain points through visual analytics.
-      </p>
-      <h3>Data-Based Website Development</h3>
-      <p>
-        Created a platform for cataloging music collections and integrating the Last.FM API for 
-        personalized recommendations and insights.
-      </p>
+ <!-- Dashboard Item: Recent Projects with Scrollable Gallery -->
+<div class="dashboard-item project-preview">
+  <h4>Recent Projects</h4>
+  <div class="project-scroll">
+    <img src="assets/project1-thumb.png" alt="Customer Insights Dashboard" class="project-thumb" />
+    <img src="assets/project2-thumb.png" alt="Music Data Platform" class="project-thumb" />
+    <img src="assets/project3-thumb.png" alt="Data Visualization Example" class="project-thumb" />
+    <!-- Add more as needed -->
+  </div>
+  <p>Click <a href="#" data-modal="projects">here</a> to see more details.</p>
+</div>
+
+<!-- Projects Modal -->
+<div id="projects" class="modal">
+  <div class="modal-content large">
+    <span class="close">&times;</span>
+    <h2>Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-detail">
+      <img src="assets/project1.png" alt="Customer Insights Dashboard" class="project-image" />
+      <div class="project-info">
+        <h3>Customer Insights Dashboard</h3>
+        <p>
+          Built an interactive Python & Tableau dashboard analyzing over 5,000 customer reviews,
+          enabling stakeholders to pinpoint service pain points through visual analytics.
+        </p>
+        <a href="https://example.com/project1" target="_blank" class="cta-button">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-detail">
+      <img src="assets/project2.png" alt="Music Data Platform" class="project-image" />
+      <div class="project-info">
+        <h3>Data-Based Website Development</h3>
+        <p>
+          Created a platform for cataloging music collections and integrating the Last.FM API
+          for personalized recommendations and insights.
+        </p>
+        <a href="https://example.com/project2" target="_blank" class="cta-button">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-detail">
+      <img src="assets/project3.png" alt="Visualization Example" class="project-image" />
+      <div class="project-info">
+        <h3>Visualization Example</h3>
+        <p>
+          A data visualization project showcasing interactive storytelling using Python and D3.js.
+        </p>
+      </div>
     </div>
   </div>
+</div>
 
   <div id="resume" class="modal">
     <div class="modal-content">
