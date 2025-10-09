@@ -310,28 +310,30 @@ footer a:hover {
 
 /* ================================
    PROJECTS PREVIEW SECTION
-   (Vertical scroll, larger thumbnails)
+   (Vertical scroll, consistent sizing)
 ================================ */
 .project-preview {
-  height: 500px; /* Match other dashboard item heights */
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  height: 100%;                  /* Make it equal height in the grid */
+  min-height: 500px;             /* Prevent smaller collapse */
+  max-height: 600px;             /* Keeps visual balance with Resume */
+  overflow: hidden;
 }
 
 .project-scroll {
+  flex: 1;                       /* Fills available space in the box */
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden; /* Remove horizontal scrollbar */
-  height: 120%;
+  overflow-y: auto;               /* Vertical scroll only */
+  overflow-x: hidden;             /* Prevent horizontal scrollbar */
   gap: 1rem;
   padding-right: 0.5rem;
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar (vertical only) */
+/* Smooth scrollbar styling */
 .project-scroll::-webkit-scrollbar {
   width: 8px;
 }
@@ -341,14 +343,14 @@ footer a:hover {
   border-radius: 10px;
 }
 
-/* Larger preview thumbnails */
+/* Larger and balanced thumbnails */
 .project-thumb {
   width: 100%;
-  height: 150px;
+  height: 160px;
   border-radius: 10px;
-  cursor: pointer;
   border: 1px solid #2e2e2e;
   object-fit: cover;
+  cursor: pointer;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
