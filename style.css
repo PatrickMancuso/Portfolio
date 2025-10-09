@@ -81,18 +81,21 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
-.linkedin-badge {
+.linkedin-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   margin-top: 1rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .LI-profile-badge {
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
