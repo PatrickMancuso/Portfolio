@@ -318,7 +318,7 @@ footer a:hover {
   justify-content: space-between;
   height: 100%;                  /* Make it equal height in the grid */
   min-height: 500px;             /* Prevent smaller collapse */
-  max-height: 620px;             /* Keeps visual balance with Resume */
+  max-height: 640px;             /* Keeps visual balance with Resume */
   overflow: hidden;
 }
 
