@@ -99,10 +99,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.LI-profile-badge:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(0, 119, 182, 0.4);
-}
+
 
 
 
