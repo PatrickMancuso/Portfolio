@@ -76,6 +76,32 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3); /* optional soft shadow */
 }
 
+.connect-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.linkedin-badge {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.LI-profile-badge {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.LI-profile-badge:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 119, 182, 0.4);
+}
+
+
 
 /* ================================
    HERO / DASHBOARD
