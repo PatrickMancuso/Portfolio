@@ -289,20 +289,19 @@ footer a:hover {
 }
 
 /* === PROJECTS PREVIEW SECTION (scrollable gallery in dashboard) === */
-.project-preview {
-  overflow: hidden;
-}
 
 .project-scroll {
   display: flex;
-  overflow-x: auto;
+  flex-direction: column;       /* Make images stack vertically */
+  overflow-y: auto;             /* Enable vertical scrolling */
+  max-height: 400px;            /* Limit height so it fits inside the box */
   gap: 1rem;
-  padding: 0.5rem 0 1rem;
+  padding: 0.5rem 0;
   scroll-behavior: smooth;
 }
 
 .project-scroll::-webkit-scrollbar {
-  height: 8px;
+  width: 8px; /* Vertical scrollbar width */
 }
 
 .project-scroll::-webkit-scrollbar-thumb {
@@ -310,18 +309,28 @@ footer a:hover {
   border-radius: 10px;
 }
 
+/* Larger, clearer preview images */
 .project-thumb {
-  height: 100px;
-  width: auto;
-  border-radius: 8px;
+  width: 100%;                  /* Fill container width */
+  height: auto;                 /* Maintain proportions */
+  max-height: 200px;            /* Prevent overly tall images */
+  border-radius: 10px;
   cursor: pointer;
   border: 1px solid #2e2e2e;
+  object-fit: cover;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
 .project-thumb:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   border-color: #0077b6;
+}
+
+/* Optional: add slight padding inside the project box */
+.project-preview {
+  max-height: 500px;
+  overflow: hidden;
+  padding-right: 0.5rem;
 }
 
 
