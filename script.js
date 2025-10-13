@@ -65,23 +65,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Clickable project thumbnails and images (lightbox effect)
+// Lightbox for main page project thumbnails only
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.createElement("div");
   lightbox.classList.add("lightbox");
   document.body.appendChild(lightbox);
 
-  const images = document.querySelectorAll(".project-thumb, .project-image");
-  images.forEach(img => {
+  const thumbs = document.querySelectorAll(".project-thumb");
+  thumbs.forEach(img => {
     img.addEventListener("click", () => {
-      lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}" />`;
+      lightbox.innerHTML = `
+        <div class="lightbox-inner">
+          <img src="${img.src}" alt="${img.alt}">
+          <div class="lightbox-caption">Visit Projects Tab for More Information</div>
+        </div>
+      `;
       lightbox.classList.add("show");
     });
   });
 
+  // Close when clicking outside image or caption
   lightbox.addEventListener("click", e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove("show");
+    if (e.target === lightbox || e.target.classList.contains("lightbox-caption")) {
+      lightbox.classList.remove("show");
+    }
   });
 });
-
