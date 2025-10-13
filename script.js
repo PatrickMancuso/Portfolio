@@ -78,15 +78,35 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="lightbox-inner">
           <img src="${img.src}" alt="${img.alt}">
           <div class="lightbox-caption">Visit Projects Tab for More Information</div>
+          <button class="cta-button lightbox-btn">Go to Projects</button>
         </div>
       `;
       lightbox.classList.add("show");
+
+      // Add event listener for the new button
+      const button = lightbox.querySelector(".lightbox-btn");
+      button.addEventListener("click", () => {
+        lightbox.classList.remove("show");
+        openProjectsModal();
+      });
     });
   });
 
-  // Close when clicking outside image or caption
+  // Function to open Projects modal
+  function openProjectsModal() {
+    const projectsLink = document.querySelector('.nav-links a[data-modal="projects"]');
+    const projectsModal = document.getElementById("projects");
+    if (projectsModal && projectsLink) {
+      projectsLink.classList.add("active");
+      projectsModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+      setTimeout(() => projectsModal.classList.add("visible"), 10);
+    }
+  }
+
+  // Close when clicking outside
   lightbox.addEventListener("click", e => {
-    if (e.target === lightbox || e.target.classList.contains("lightbox-caption")) {
+    if (e.target === lightbox) {
       lightbox.classList.remove("show");
     }
   });
