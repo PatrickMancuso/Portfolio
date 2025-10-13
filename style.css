@@ -492,6 +492,43 @@ footer a:hover {
 }
 
 /* ================================
+   LIGHTBOX ENHANCEMENT (with caption)
+================================ */
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90%;
+  text-align: center;
+}
+
+.lightbox-inner img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+  border: 1px solid #2e2e2e;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-inner img:hover {
+  transform: scale(1.02);
+}
+
+.lightbox-caption {
+  font-size: 1rem;
+  font-style: italic;
+  color: #cccccc;
+  opacity: 0.85;
+  padding: 0.5rem 1rem;
+  background: rgba(15, 15, 15, 0.7);
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+}
+
+
+/* ================================
    RESPONSIVE TWEAKS (PROJECTS)
 ================================ */
 @media (max-width: 768px) {
