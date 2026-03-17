@@ -112,34 +112,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Resume lightbox
-const resumeContainer = document.querySelector(".resume-container");
-const resumeLightbox = document.createElement("div");
-resumeLightbox.classList.add("resume-lightbox");
-resumeLightbox.innerHTML = `
-  <div class="resume-lightbox-content">
-    <span class="close-lightbox">&times;</span>
-    <embed src="assets/PatrickMancuso_Resume.pdf" type="application/pdf">
-    <div style="margin-top:10px;">
-      <a href="assets/PatrickMancuso_Resume.pdf" class="cta-button" download>Download PDF</a>
-      <button class="cta-button" onclick="window.print()">Print</button>
-      <a href="https://drive.google.com/drive/u/0/my-drive" target="_blank" class="cta-button">Add to Drive</a>
-    </div>
-  </div>
-`;
-document.body.appendChild(resumeLightbox);
-
-// Open lightbox
-resumeContainer.addEventListener("click", () => {
-  resumeLightbox.classList.add("show");
-});
-
-// Close lightbox
-resumeLightbox.querySelector(".close-lightbox").addEventListener("click", () => {
-  resumeLightbox.classList.remove("show");
-});
-
-// Close when clicking outside content
-resumeLightbox.addEventListener("click", e => {
-  if (e.target === resumeLightbox) resumeLightbox.classList.remove("show");
-});
