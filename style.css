@@ -106,21 +106,44 @@ body {
   bottom: 20px;
   left: 20px;
 
-  width: 250px;
+  width: 260px;
   min-height: 120px;
 
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid #2e2e2e;
 
   border-radius: 12px;
-  padding: 15px;
+  padding: 1rem;
 
-  color: white;
-  z-index: 999;
+  color: #f1f1f1;
+
+  font-family: "Inter", "Poppins", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
 
   backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+
+  z-index: 999;
+
+  transition: border-color 0.3s ease,
+              transform 0.3s ease;
 }
 
+.bottom-left-box:hover {
+  border-color: #0077b6;
+  transform: translateY(-2px);
+}
+
+.bottom-left-box h3 {
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.bottom-left-box p {
+  color: #cccccc;
+}
 
 
 /* ================================
